@@ -20,5 +20,10 @@ function countChar(){
     const result:any = str.value.replace(/\s+/g,'').length;
     console.log(result);
     const countString:any = document.getElementById("countString");
-    countString.innerHTML = `Số lượng kí tự: ${result}`;
+    // countString.innerHTML = `Số lượng kí tự: ${result}`;
+    displayResult(countString, countString?.textContent,result);
+}
+
+function displayResult(element:any, text:string, result:any){
+    element.innerHTML = text + result;
 }
