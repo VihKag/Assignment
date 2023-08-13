@@ -36,3 +36,18 @@ function concateString() {
     var result = string1 === null || string1 === void 0 ? void 0 : string1.concat(" ", string2); //string1=string1+" "+string2
     displayResult(concatchar, "Nối hai chuỗi s1 và s2: ", result);
 }
+function upperCaseChar() {
+    var outputupper = document.querySelector("#outputupper");
+    var str = document.querySelector("#inputString1").value;
+    for (var i = 0; i < str.length; i++) {
+        var result = str.slice(i, i + 1).toUpperCase();
+        createAndAppendElementHTML("p", outputupper, "K\u00ED t\u1EF1 th\u1EE9 ".concat(i + 1, " l\u00E0: ").concat(result));
+    }
+}
+function createAndAppendElementHTML(tagName, parentElement, text) {
+    var element = document.createElement(tagName);
+    if (text) {
+        element.textContent = text;
+    }
+    parentElement.appendChild(element);
+}

@@ -41,3 +41,22 @@ function concateString(){
     const result:any= string1?.concat(" ", string2);//string1=string1+" "+string2
     displayResult(concatchar, "Nối hai chuỗi s1 và s2: ",result)
 }
+function upperCaseChar(){
+    const outputupper:any = <HTMLInputElement>document.querySelector("#outputupper");
+    const str:any = (<HTMLInputElement>document.querySelector("#inputString1")).value;
+    for(let i:number=0; i< str.length; i++){
+        var result: string = str.slice(i,i+1).toUpperCase();
+        createAndAppendElementHTML("p",outputupper,`Kí tự thứ ${i+1} là: ${result}` )
+    }
+}
+
+function createAndAppendElementHTML(tagName:string, parentElement:HTMLElement, text?:string){
+    const element: HTMLElement = document.createElement(tagName);
+    if(text){
+        element.textContent=text;
+    }
+    parentElement.appendChild(element);
+    
+}
+
+
