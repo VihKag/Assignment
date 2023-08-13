@@ -7,18 +7,17 @@
     <script src="public/helloworld.js"></script>
 </head>
 <body>
-    <label for="inputString">Nhập chuối s1: </label>
+    <label for="inputString1">Nhập chuối s1: </label>
     <input type="text" id="inputString1">
-    <label for="inputString">Nhập chuối s2: </label>
+    <label for="inputString2">Nhập chuối s2: </label>
     <input type="text" id="inputString2">
-    <button onclick="displayInput()">Xác nhận</button>
     <div class="displayOutput">
         <div id="countString">Số lượng kí tự: </div>
         <button onclick="countChar()" id="countChar">Xác nhận</button>
-        <div class="concatenateChar">Nối hai chuỗi s1 và s2: </div>
-        <button onclick="">Xác nhận</button>
-        <div class="formatString">Chỉnh sửa tên viết hoa chữ cái đầu: </div>
-        <button onclick="">Xác nhận</button>
+        <div id="concatChar">Nối hai chuỗi s1 và s2: </div>
+        <button onclick="concateString()">Xác nhận</button>
+        <div id="upperString">Chỉnh sửa tên viết hoa chữ cái đầu: </div>
+        <button onclick="upperName()">Xác nhận</button>
     </div>
 </body>
 </html>
